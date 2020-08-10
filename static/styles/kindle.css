@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 32px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 480px;
+  line-height: 1.75;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container > div {
+  width: 100%;
+}
+
+.container .header {
+  height: 4rem;
+  line-height: 4rem;
+  border-bottom: 4px solid #dddddd;
+}
+
+.container .header .title {
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1.75rem;
+  font-weight: bold;
+}
+
+.container .header .title a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.container .header .user {
+  text-align: right;
+  width: 50%;
+  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 1.75rem;
+}
+
+.container .main {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.25rem;
+}
+
+.container .main .list {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.container .main .list ul {
+  line-height: 1.25;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ebeef5;
+  overflow: hidden;
+}
+
+.container .main .list ul li {
+  padding: 0 10px;
+  float: left;
+}
+
+.container .main .list ul li:nth-child(1) {
+  width: 2rem;
+  padding: 0;
+}
+
+.container .main .list ul li:nth-child(2) {
+  width: calc(100% - 440px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container .main .list ul li:nth-child(3) {
+  width: 3rem;
+  text-align: center;
+}
+
+.container .main .list ul li:nth-child(4) {
+  display: none;
+  width: 120px;
+  text-align: center;
+}
+
+.container .main .list ul li:nth-child(5) {
+  float: right;
+  width: 3rem;
+  padding: 0;
+}
+
+.container .main .list ul a {
+  display: block;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  width: 100%;
+  color: #fff;
+  border-radius: 0.1rem;
+  margin: 0.2rem 0;
+  text-align: center;
+  background-color: #909090;
+}
+
+.container .main .list ul.title {
+  padding: 0 10px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #d0d0d0;
+  line-height: 60px;
+}
+
+.container .main .list ul.title:last-child {
+  border: none;
+}
+
+.container .main .list ul.title:first-child {
+  text-align: center;
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.container .main .list ul.title:nth-child(4) {
+  display: none;
+}
+
+.container .main .list ul.list-item {
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.container .main .list ul.list-item span {
+  display: block;
+  height: 2rm;
+}
+
+.container .main .list ul.list-item .img {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container .main .list ul.list-item .img img {
+  display: block;
+  height: 100%;
+}
+
+.container .main .list ul.list-item:last-child {
+  border: none;
+}
+
+.container .main .list ul.list-item:nth-child(4) {
+  display: none;
+}
+
+.container .main .list ul:hover {
+  background-color: #f5f7fa;
+}
+
+.container .footer {
+  border-top: 2px solid #dddddd;
+  height: 3rem;
+}
+
+.container .footer p {
+  display: block;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #d0d0d0;
+}
+
+.container .footer p a {
+  color: #d0d0d0;
+  text-decoration: none;
+}
+/*# sourceMappingURL=kindle.css.map */

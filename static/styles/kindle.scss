@@ -1,0 +1,167 @@
+@import "reset";
+html {
+    font-size: 32px;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    min-width: 480px;
+    line-height: 1.75;
+    a {
+        text-decoration: none;
+    }
+    >div {
+        width: 100%;
+    }
+    .header {
+        height: 4rem;
+        line-height: 4rem;
+        border-bottom: 4px solid #dddddd;
+        .title {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            padding-left: 1.75rem;
+            font-weight: bold;
+            a {
+                color: #555555;
+                text-decoration: none;
+                font-size: 1.25rem;
+            }
+        }
+        .user {
+            text-align: right;
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+            padding-right: 1.75rem;
+        }
+    }
+    .main {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.25rem;
+        .list {
+            width: 100%;
+            font-size: 1rem;
+            ul {
+                line-height: 1.25;
+                height: 2rem;
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #ebeef5;
+                overflow: hidden;
+                li {
+                    padding: 0 10px;
+                    float: left;
+                    &:nth-child(1) {
+                        width: 2rem;
+                        padding: 0;
+                    }
+                    &:nth-child(2) {
+                        width: calc(100% - 440px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    &:nth-child(3) {
+                        width: 3rem;
+                        text-align: center;
+                    }
+                    &:nth-child(4) {
+                        display: none;
+                        width: 120px;
+                        text-align: center;
+                    }
+                    &:nth-child(5) {
+                        float: right;
+                        width: 3rem;
+                        padding: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    height: 1.4rem;
+                    line-height: 1.4rem;
+                    width: 100%;
+                    color: #fff;
+                    border-radius: 0.1rem;
+                    margin: 0.2rem 0;
+                    text-align: center;
+                    background-color: #909090;
+                }
+                &.title {
+                    padding: 0 10px;
+                    text-align: left;
+                    // background-color: #808080;
+                    // border-right: 1px solid #808080;
+                    box-sizing: border-box;
+                    background-color: #d0d0d0;
+                    line-height: 60px;
+                    &:last-child {
+                        border: none;
+                    }
+                    &:first-child {
+                        text-align: center;
+                        white-space: nowrap;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+                &.list-item {
+                    //margin: 1rem 0;
+                    //border-right: 1px solid #808080;
+                    height: 2rem;
+                    line-height: 2rem;
+                    span {
+                        display: block;
+                        height: 2rm;
+                    }
+                    .img {
+                        width: 1rem;
+                        height: 1rem;
+                        margin: 0.5rem;
+                        overflow: hidden;
+                        text-align: center;
+                        img {
+                            display: block;
+                            height: 100%;
+                        }
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    background-color: #f5f7fa;
+                }
+            }
+        }
+    }
+    .footer {
+        border-top: 2px solid #dddddd;
+        height: 3rem;
+        p {
+            display: block;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #d0d0d0;
+            a {
+                color: #d0d0d0;
+                text-decoration: none;
+            }
+        }
+    }
+}
