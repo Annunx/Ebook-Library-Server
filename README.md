@@ -3,17 +3,14 @@
 个人电子书管理 PHP 程序（电子书云盘）
 
 - 打开目录列出文件
-- 使用浏览器下载电子书
-
 - 可配置电子书格式
-
-- 使用浏览器下载
-
+- 自动识别 Kindle，可以通过配置文件强制指定渲染 Kindle 模式
+- 下载电子书
 - 支持 Kindle 内置浏览器下载
 
 ### 项目背景
 
-早些时候在图灵社区买了一些电子书，后来又收集了一些，渐渐的攒了一个小的书库。书籍按照文件管理的,方便迁移,其中也试过用 (Calibre)[https://calibre-ebook.com/] 来管理书籍,Calibre 会复制一份文件并命名为拼音，不方便查找和迁移，还需要双倍空间。之后 PC 一直用 [Alfa eBooks Manager](https://www.alfaebooks.com/) 管理电子书,后来购买了一台家用 [TerraMaster NAS(中文名:铁威马)](https://www.terra-master.com/cn/)，文件迁移到 NAS 上；
+早些时候在图灵社区买了一些电子书，后来又收集了一些，渐渐的攒了一个小的书库。书籍按照文件管理的,方便迁移,其中也试过用 [Calibre](https://calibre-ebook.com/) 来管理书籍,Calibre 会复制一份文件并命名为拼音，不方便查找和迁移，还需要双倍空间。之后 PC 一直用 [Alfa eBooks Manager](https://www.alfaebooks.com/) 管理电子书,后来购买了一台家用 [TerraMaster NAS(中文名:铁威马)](https://www.terra-master.com/cn/)，文件迁移到 NAS 上；
 
 平常使用 Ipad 和 Kindle 看书，Ipad 可以直接使用内置的文件管理器访问 NAS 上的文件，Kindle 就比较尴尬了，每次需要开电脑，把电子书下载到电脑，在通过数据线传到 Kindle ，比较麻烦。
 
@@ -25,8 +22,7 @@
 
 ### 未来功能
 
-- 设备识别，自动响应
-- 登录（内网穿透）
+- 登录（权限验证）
 - 文件移动及重命名
 - 生成封面
 
