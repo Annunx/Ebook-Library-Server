@@ -13,6 +13,20 @@ if (!empty($_GET['act']) && $_GET['act'] === 'downFile') {
 	downFile($fileName);
 	exit;
 }
+// 浏览器 UA
+$header =  $_SERVER['HTTP_USER_AGENT'];
+$ret = strstr($header, "Kindle");
+if ($ret) {
+    $isKindle = true;
+} else {
+    $isKindle = false;
+}
+// 用户设置大于默认设置
+if (!empty($config['settings']['isKindle'])) {
+    echo "强制用户配置";
+    $isKindle = $config['settings']['isKindle'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="zh_CN">
@@ -22,7 +36,7 @@ if (!empty($_GET['act']) && $_GET['act'] === 'downFile') {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title><?php echo $config['settings']['title'] ?></title>
 
-	<link rel="stylesheet" href="<?php if ($config['settings']['isKindle']) {
+	<link rel="stylesheet" href="<?php if ($isKindle) {
 										echo "/static/styles/kindle.css";
 									} else {
 										echo "/static/styles/index.css";
@@ -60,7 +74,7 @@ if (!empty($_GET['act']) && $_GET['act'] === 'downFile') {
 						$p = $path . "/" . $val;
 						$temp = explode(".", $val);
 						$ext = end($temp);
-						if (!fileExtType($ext, $config['settings']['isKindle'])) {
+						if (!fileExtType($ext, $isKindle)) {
 							continue;
 						}
 				?>
@@ -73,7 +87,7 @@ if (!empty($_GET['act']) && $_GET['act'] === 'downFile') {
 							<li><?php echo transByte(filesize($p)); ?></li>
 							<li><?php echo date("Y-m-d", filemtime($p)); ?></li>
 							<?php
-							if ($config['settings']['isKindle']) {
+							if ($isKindle) {
 							?>
 								<li><a class="download" href="<?php echo $path . "/" . $val; ?>" download="<?php echo $val; ?>">下载</a></li>
 							<?php
@@ -116,13 +130,6 @@ if (!empty($_GET['act']) && $_GET['act'] === 'downFile') {
 			</div>
 		</div>
 	</div>
-	<script>
-		window.onload = function() {
-			// var wi = window.outerWidth;
-			// var hi = window.outerHeight;
-			// alert(wi + "-" + hi);
-		};
-	</script>
 </body>
 
 </html>
